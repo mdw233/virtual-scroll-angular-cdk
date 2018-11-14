@@ -1,9 +1,9 @@
 <h1 class="center">Virtual Scroll using Angular 7</h1>
 
 <ul class="list">
-  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="1" >
+  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="10" >
     <ng-container *cdkVirtualFor="let n of numbers">
-      <li> {{n}} </li>
+      <li [style.height.px]="n.height"> {{n.index}} (height: {{n.height}}) </li>
     </ng-container>
   </cdk-virtual-scroll-viewport>
 </ul>
